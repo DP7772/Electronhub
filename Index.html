@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electron Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            
+        }
+        
+        .bar{
+            width:100%;
+            height:90px;
+            box-sizing:border-box;
+            background-color:yellow;
+            position:fixed;
+            top:1px;
+            margin:0px 2px 0px 1px;
+        }
+        
+        a{
+            text-decoration:none;
+           color:black;
+               }
+     
+
+        
+        .home{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left;
+        }
+        
+        .home:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+
+        
+       .product{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left; 
+           position:relative;
+        }
+        
+        .product:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+            
+        }
+        
+        .product:hover .drop{
+            display:block;
+            font-size:20px;
+        }
+        
+        .support{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left; 
+        }
+        
+        .support:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        .about{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+         
+           float:left; 
+        }
+        
+        .about:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        
+        .contact{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+         
+           float:left;
+        }
+        
+        .contact:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        .drop{
+           width:150%;
+           height:150px;
+           box-sizing:border-box;
+      background-color:#ffb355;
+           border-radius:1px 30px 30px 30px;
+            position:absolute;
+            top:92px;
+            left:65px;
+            text-align:justify;
+            display:none;
+            overflow:scroll;
+        }
+        
+        .drop div{
+            width:100%;
+            height:60px;
+        box-sizing:border-box;
+
+      
+         padding:13px 0px 0px 30px ;
+        }
+        
+        
+        .drop div:hover{
+            background-color:red;
+            color:white;
+            transition:0.5s;
+            border-radius:36px;
+        }
+        
+        .name{
+            width:100%;
+            height:300px;
+           margin-top:92px;
+          background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgL18i5yGhACTQ-4sn5NlYYAWxVwWx_D216EZTQpnDIog48dHZzoTFNusexpwPU5ZFFV0lBNOzacNRXTjRlnSIqtMccdJQUGn8ZOPtTDE-uB0RNTwqff_0zRzZNhRzka-uzSmEHN7ofJHk_Fe35ykBCiBnM7yJZeSmazTBYapLC0b5LvwU2G-UHpy_5Arc/s320/ecommerce-online-shopping-marketing-concept-vector-stock-illustration_618588-583.jpg);
+          background-size:100% 300px;
+       
+         
+        }
+        
+        .name h1{
+            color:white;
+            font-size:8vw;
+            font-weight:bold;
+            padding:50px 0px 0px 200px;
+        }
+        
+        .name h3{
+            color:white;
+            font-size:3.5vw;
+            font-weight:bold;
+            padding:15px 0px 0px 123px;
+        }
+        
+        .animation{
+            width:100%;
+            height:550px;
+      box-sizing:border-box;
+            float:left;
+            margin-top:1px;
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+     
+     background-size:100% 550px;
+     -webkit-animation:image 8s linear infinite;
+     -o-animation:image 8s linear infinite;
+    -moz-animation:image 8s linear infinite;
+     animation:image 8s linear infinite;
+        }
+        
+        @-webkit-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @-o-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @-moz-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+    .choose{
+        width:100%;
+        height:80px;
+        box-sizing:border-box;
+        float:left;
+        padding:20px 0px 0px 308px;
+        font-size:3.5vw;
+        font-weight:bold;
+        margin-bottom:20px;
+    }   
+        
+        h2{
+            text-align:center;
+       
+       
+              }
+        
+        @keyframes h2 {
+     
+        }
+        
+        #phonebrand{
+           width:100%;
+           height:100px; 
+     box-sizing:border-box;
+         float:left;
+         margin-top:20px;
+       
+         
+        display:flex;
+  
+              }
+        
+        img{
+            width:100%;
+            height:100%;
+        }
+        
+        .samsung{
+            width:20%;
+            height:100px;
+     box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;         border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .apple{
+            width:18%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border: 3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .mi{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .oneplus{
+            WIDTH:20%;
+            HEIGHT:100PX;
+           box-sizing:border-box;
+          padding:0px;
+          padding-left:5px;
+          padding-right:5px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .vivo{
+            width:20%;
+            height:100px;
+        box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+          padding:5px 0px 5px 5px;
+        }
+      
+    .vivo img{
+          width:95%;
+          height:98%;
+          
+      }
+      
+      
+      h4{
+          text-align:center;
+          line-height:60px;
+          font-size:2.3vw;
+          
+      }
+      
+      #watchbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+ 
+      .boat{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:5px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+      
+      
+        .noise{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        #headbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+        
+        .jbl{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .sony{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        #tabletbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.lenovo{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+ #laptopbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.dell{ 
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.hp{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.acer{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+
+#camerabrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.canon{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+
+.panasonic{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.fujifilm{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .nikon{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+#televisionbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+ 
+        .lg{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+ 
+        .tcl{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+
+#washbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.whirlpool{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.godrej{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.haier{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+#Refrigeratorbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+#microbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.bajaj{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+
+#condibrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.bluestar{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.foot{
+width:100%;
+height:50px;
+color:white;
+box-sizing:border-box;
+background-color:black;
+float:left;
+margin-top:15px;
+font-weight:bold;
+padding-top:10px;
+padding-left:255px;
+}
+
+
+
+
+
+        
+        
+      @media only screen and (max-width:600px) 
+      {
+          .bar{
+        background-color:#ffb380;
+        margin:0px;
+        height:350px;
+               
+          }
+          
+          .home{
+              width:100%;
+              padding:0 auto;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .home:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .product{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .product:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .support{
+              width:100%;
+              padding-left:10px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .support:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .about{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .about:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .contact{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .contact:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .drop{
+          width:70%;
+          height:60px;
+            overflow:scroll;
+            top:72px;
+            left:125px;
+       background-color:white;
+            border-radius:5px;
+          }
+         
+          .drop div:hover{
+              border-radius:5px;
+          }
+          
+          .name{
+             margin-top:351.7px;
+            height:150px; background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAA0lx7ifVnKx6lEw8S651GXq6GXM5EI8Bj1nLzrhV41_qYGsJOLxjVR2dGFJHIglFTAtM5gNdFAIWPpBvECMj1-FzbH8xxIljUhYAvUiOZ0AV1IVkLPziP5uLtzO02zfkKxTavx2sVfT2EG84FOVuU2ACm-kwNGovYYLlok_AR2J2jwPUce-5XZYSOuQ/s320/IMG-20240414-WA0003.jpg);
+             background-size:100%
+ 100%;
+                   }
+          
+          .name h1{
+             
+              font-size:7vw;
+              padding:70px 0px 0px 98px;
+          }
+          
+          .name h3{
+           
+              font-size:3.5vw;
+              padding:5px 0px 0px 50px;
+                     }
+          
+          .animation{
+              height:250px;
+                           background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqrCbuUDGJw3d0TDd9xiB-8BljUWnGRV37cSIPZxjr2ER5TfPejNiLG7bXhU-y3tfROUGQp9-70MT9wCG7KGBV8NYzgJygbeqIYiyHQd0WrTM6PsLh7zfw8VM9Rpdf5u5bE8LG8e9WUk0xrdXsYaOaAtLq-RidiCOWYFj7Y8-IMSv_DEd9n8Dqc-eI5-E/s320/IMG-20240414-WA0010.jpg);
+   background-size:100% 250px;
+          }
+          
+          @keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqrCbuUDGJw3d0TDd9xiB-8BljUWnGRV37cSIPZxjr2ER5TfPejNiLG7bXhU-y3tfROUGQp9-70MT9wCG7KGBV8NYzgJygbeqIYiyHQd0WrTM6PsLh7zfw8VM9Rpdf5u5bE8LG8e9WUk0xrdXsYaOaAtLq-RidiCOWYFj7Y8-IMSv_DEd9n8Dqc-eI5-E/s320/IMG-20240414-WA0010.jpg);
+                background-size:100% 250px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJE3mtjFxCikHmTbu5Q0GIUrRASvcCZ7tg_wZM9qO8i95_DwWR1TnWj9g-qPfJhQm9n03EPYOlQwHqKW4Go1Hi_htwX0ehLF98Rp7D2VaSUDx9GOtsPFIAGram-bGbh8IPVE-NwXASovXOfgylAZt1nhMWY987SKLcxvZSSaiGHstmnWaWAOnVCQuaeKQ/s320/IMG-20240414-WA0009.jpg);
+                background-size:100% 250px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS6dM4snYvORhlHx8CkUXyl8t2tUFwUH7FiN5tdUeX3axCTpxMDDBXpUMya-eiDQPnEVk5uwHug8Iave3gYfhZFiabBGQB829d-PNSs0I3AOuAhChZFojTI3rRROlCHIZKVsNQttRghRWlwntujb-e0oHTKkqSsVUW6iK3uOzpfWE8c81x9ST-Evxu8bs/s320/IMG-20240414-WA0007.jpg); background-size:100% 250px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjg9Mk9VhMT4kmAh5kak0N0pVontLUaWb5JkAsEYW7ThDyK99AYgI0JxuIFpmzunj7pOuGTphgg7uilDnXJnFZ6w2G4WvIIwMZj4ZiKFkvqKq9kS9DQlMqAPuZBKRlohcP0zL4tfvR9jsfo91-87iATbHCUDnjhTfv7GDZrwQAtefWILLMywqIIZ0LjUDo/s320/IMG-20240414-WA0004.jpg);
+                background-size:100% 250px;
+            }
+            
+        }
+        
+       .choose{
+       height:60px;
+           font-size:4vw;
+           padding:15px 0px 0px 113px;
+         margin-bottom:1px;
+       }  
+          
+          h2{
+              font-size:4vw;
+              margin:0px;
+              padding:0px;
+          }
+          
+
+          
+      #phonebrand{
+      width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:140px;
+          border:3px groove black;
+border-radius:10px;
+      }   
+        
+      .samsung{
+          width:98%;
+          height:110px;
+          margin:0px;
+          margin-top:15px;
+              margin-left:2px;
+
+      } 
+          .apple{
+              width:98%;
+              height:150px;
+              margin-top:15px;
+              margin-left:2px;
+          }
+          
+          .mi{
+              width:98%;
+              margin-top:15px;
+              margin-left:2px;
+              margin-bottom:15px;
+          }
+          
+          .oneplus{
+              width:98%;
+              margin-top:0px;
+              margin-left:2px;
+              padding-left:5px;
+              padding-right:5px;
+          }
+          
+          .vivo{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+          h4{
+              font-size:4vw;
+              line-height:50px;
+          }
+          
+           #watchbrand{
+           width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:175px;
+          border:3px solid black;
+border-radius:10px;
+      }   
+          
+          .noise{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+         
+          .boat{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+         
+          #headbrand{
+           width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:130px;
+          border:3px solid black;
+border-radius:10px;
+      }   
+          
+          .jbl{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+          .sony{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+#tabletbrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+      }
+
+.lenovo{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#laptopbrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+      }
+
+.dell{
+              width:98%;
+              margin:0px;
+height:110px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.hp{
+              width:98%;
+              margin:0px;
+height:110px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.acer{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+
+#camerabrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.nikon{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.panasonic{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.fujifilm{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.canon{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+
+#televisionbrand{
+          width:99%;
+          height:165px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.lg{
+              width:98%;
+              margin:0px;
+height:135px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.tcl{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#washbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.whirlpool{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.godrej{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.haier{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#Refrigeratorbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+#microbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.bajaj{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#condibrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.bluestar{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.foot{
+height:60px;
+padding-left:40px;
+font-size:2.5vw;
+padding-top:20px;}
+
+      }
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+      
+      
+      @media only screen and (max-width:900px) and (min-width:768px)
+      {
+          .drop{
+              width:190%;
+          }
+          
+          .name{
+              height:220px;
+          }
+          
+          
+          .name h1{
+            
+              padding-left:157px;
+          }
+          
+          .name h3{
+             padding-left:100px;
+          }
+          
+          .animation{
+              height:500px;
+          }
+          
+          .choose{
+              padding:20px 0px 0px 218px;
+              margin-bottom:5px;
+          }
+          
+          h2{
+              margin:0px;
+              padding:0px;
+              
+          }
+          
+          #phonebrand{
+              margin-top:20px;
+          }
+          
+          h4{
+              font-size:3vw;
+          }
+          
+.foot{
+padding-left:137px;}
+          
+      }
+    </style>
+</head>
+<body>
+    <div class="bar">
+         <a href="https://electronhub.netlify.app">
+        <div class="home">
+           Home
+             </div>
+             </a>
+              
+        <div class="product">
+           
+            Products
+           
+            <div class="drop">
+                 <a href="#h21">
+                     <div>
+   SmartPhones
+                </div>
+                </a>
+                <a href="#h41">
+                <div>
+ SmartWatch
+                </div>
+                
+                </a>
+                <a href="#h42">
+                     <div>
+        Headphones
+                </div>
+                </a>
+                 <a href="#h43">
+                     <div>
+                    Tablets
+                 
+                </div>
+                </a>
+               <a href="#h44"> 
+                   <div>
+                
+                    Laptops
+                
+                </div>
+                </a>
+               <a href="#h45">   
+                  <div>
+                  
+                    Camera
+              
+                </div>
+                </a>
+                <a href="#h46"> 
+                    <div>
+                  
+                    Televisions
+                 
+                </div>
+                </a>
+               <a href="#h47">
+                     <div>
+                
+                    Washing Machines
+                 
+                </div>
+                </a>
+                <a href="#h48">
+                    <div>
+               
+                    Refrigerators
+                
+                </div>
+                </a>
+               <a href="#h49"> 
+                    <div>
+                 
+                    Microwaves
+               
+                </div>
+                </a>
+                <a href="#h410"> 
+                    <div>
+                
+                    Air Conditioners             
+                      </div>
+                      </a>
+            </div>
+        </div>
+        <a href="https://electronhubsupport.netlify.app">
+             <div class="support">
+            Support
+            </div>
+            </a>
+        <a href="https://electronhubaboutus.netlify.app"> 
+            <div class="about">
+           
+            About Us
+           
+            </div>
+            </a>
+        <a href="https://electronhubsupport.netlify.app"> 
+            <div class="contact">
+            Contact Us
+            </div>
+        </a>
+    </div>
+    <div class="name">
+        <h1> Electron Hub</h1>
+        <h3> Har Ghar ki technology bas yehi se !</h3>
+    </div>
+    <div class="animation">
+        
+    </div>
+    <div class="choose">
+        Choose Your Brand
+    </div>
+    
+    <h2 id="h21"> Smartphones</h2>
+    <div id="phonebrand">
+ 
+       <div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+           <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png"
+           >
+           </a>
+       </div>
+       
+       
+             <div class="apple">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqiyYFW0kdFmdWU94Y15TPJ8NZ5WkxJiDY96vadXS7u5OuxxTFjJBPp3WcaxMcZFrDVyvvag00vGIoT0NAGlVvp8a9ZFX_TrLsUAqpwDJp24VpIJrccT4BwaJu_NyI-mKl1FKQWNvikFp9QQUCPCHTUuhbrhcUPATli1bgnaUSB2-4Ecxc2-LusAsMq3I/s560/pngwing.com%20(1).png">
+           </a>
+       </div>
+       
+       
+      
+       <div class="mi">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV9swkMHz32AV7xVqYOgWsGmjLtfzaY_ANwt7mVJZHnCJnfn3edqp7qU7GccQfee2tUWpwwW_OUECAdeg4QkrtE7gssaflTvwSykAkm1GvVbtp6V4BLbuf6hOyfhwlk5bUhz5EO59wRTo8f08OGKeu-vOwQpTSRddNNDA0azqoWWZ3RPzk-w9JE4Jonr4/s4096/pngwing.com.png">
+           </a>
+       </div>
+       
+       
+     
+       <div class="oneplus">
+           <a href="#">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZNyg3aW6rdiyVMN1JZQJZ8VMVUB8KWp-Fd4KsVC6mKNN0nGWp0hcP6yySzhPvhxCXTcT0JdteKuzzi63Ja0wfCR6u1vQLUmJj5__AeRVMregCFGV7XapfyqXd38CkNVyzRZsaaYw2g_9Ha5AR-Tx-xilAreIh2okmHyGFcWezYQOKiSI6yB530UCclA0/s3840/OnePlus-Logo.png"   >
+           </a>
+       </div>
+    
+       
+      
+       <div class="vivo">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpanRSm06vyhVwzLo-Gfrgb_5Mqaw639MF3hnbTsnAHv4jvTz8Cejyg9DGcozakqXS98h9dTvP6JlXfvXVvq0ONezkzO7c74ZGChENJ3hMIqxg4xRUOxgtuNbs1vjSyesZKRGFYH9cFgBjL_0iOSSuBKZBsYi5L9Dc5OyjfAuzwnYAfz2FfwVbjnt__uI/s2287/kisspng-vivo-logo-smartphone-branding-5acf572792de02.5074172915235377036016.png">
+           </a>
+       </div>  </div>
+    
+   <h4 id="h41"> SmartWatch</h4>
+   <div id="watchbrand">
+       <div class="apple">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqiyYFW0kdFmdWU94Y15TPJ8NZ5WkxJiDY96vadXS7u5OuxxTFjJBPp3WcaxMcZFrDVyvvag00vGIoT0NAGlVvp8a9ZFX_TrLsUAqpwDJp24VpIJrccT4BwaJu_NyI-mKl1FKQWNvikFp9QQUCPCHTUuhbrhcUPATli1bgnaUSB2-4Ecxc2-LusAsMq3I/s560/pngwing.com%20(1).png">
+           </a>
+       </div>
+       
+       <div class="noise">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioukaK8fXRJdHgiW5phNxlWJydgACsU-RFRnWObz6mJc7Ly7TlkH_H9fc7SrFV058Fa5nzP1i_9aGuBgOMWO5Sb1ZxUX4YznTBke_zWeQ_-ts8iuO7e_CLjg2_gTlSiWnqrpxtxlqGdbbxXSHTy_aLkRWPhAPqveHxCAr1w_1YyR9x3FSP4v_tTGYOtOQ/s3000/Noise.png">
+           </a>
+       </div>
+       
+       <div class="boat">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinaTCLeGZEkep1vP5hDzQNmsZLayJeR8adeK9c3XWyG6Cb4m-vVbO8e9Alg21EITAIwzOqbbudCEAlwP-qmvIANj_oX2TIAQ6jMNjZyd689CIyN1gd0VFbxxBEoQELvqvf0424XnAGtDmSCXOpZwTK3b1cC63ulujLxIBG-5yUH0tOlj43opNxxvgyUJc/s1875/boAt%20Logo%20Vector.png">
+           </a>
+       </div>
+       
+       <div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png">
+           </a>
+       </div>
+       
+       <div class="mi">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV9swkMHz32AV7xVqYOgWsGmjLtfzaY_ANwt7mVJZHnCJnfn3edqp7qU7GccQfee2tUWpwwW_OUECAdeg4QkrtE7gssaflTvwSykAkm1GvVbtp6V4BLbuf6hOyfhwlk5bUhz5EO59wRTo8f08OGKeu-vOwQpTSRddNNDA0azqoWWZ3RPzk-w9JE4Jonr4/s4096/pngwing.com.png">
+           </a>
+       </div> 
+   </div>
+   <h4 id="h42"> Headphones</h4>
+   <div id="headbrand">
+       
+       <div class="boat">
+           <a href="#">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinaTCLeGZEkep1vP5hDzQNmsZLayJeR8adeK9c3XWyG6Cb4m-vVbO8e9Alg21EITAIwzOqbbudCEAlwP-qmvIANj_oX2TIAQ6jMNjZyd689CIyN1gd0VFbxxBEoQELvqvf0424XnAGtDmSCXOpZwTK3b1cC63ulujLxIBG-5yUH0tOlj43opNxxvgyUJc/s1875/boAt%20Logo%20Vector.png">
+           </a>
+       </div>
+       
+       <div class="jbl">
+           <a htef="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGm4dH0jIEw9hk0bHTUVsYRiqI7-1IjNmj6afGxF3zU-DLIRMpuqah3XAx4jrbqh-fB4vftQd36HPWSSHG8xuWUMDANsSw-hzvjWigfaBnaYkFYDWD-41RSzROutGF-oKdRL3Vnn3tKoJNWine5tEPgAWo4glmhyphenhyphenEQvciY5unCic03-KfTr9ByYnS_rBQ/s1024/pngwing.com.png">      
+           </a>
+       </div>
+       
+       <div class="apple">
+           <a href="#">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqiyYFW0kdFmdWU94Y15TPJ8NZ5WkxJiDY96vadXS7u5OuxxTFjJBPp3WcaxMcZFrDVyvvag00vGIoT0NAGlVvp8a9ZFX_TrLsUAqpwDJp24VpIJrccT4BwaJu_NyI-mKl1FKQWNvikFp9QQUCPCHTUuhbrhcUPATli1bgnaUSB2-4Ecxc2-LusAsMq3I/s560/pngwing.com%20(1).png">   
+           </a>
+       </div>
+       
+       <div class="oneplus">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZNyg3aW6rdiyVMN1JZQJZ8VMVUB8KWp-Fd4KsVC6mKNN0nGWp0hcP6yySzhPvhxCXTcT0JdteKuzzi63Ja0wfCR6u1vQLUmJj5__AeRVMregCFGV7XapfyqXd38CkNVyzRZsaaYw2g_9Ha5AR-Tx-xilAreIh2okmHyGFcWezYQOKiSI6yB530UCclA0/s3840/OnePlus-Logo.png" >     
+           </a>
+       </div>
+       
+       <div class="sony">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr5p2SDuVw8uJlpUPyGDa3if1-m9jFyFHCt87fMAmNWYQmQmYSw0AzzCBe_8pW3SWVk7egaPgvGLv5iTKLAtiBNOwIutJovkcjzADrCZNm7nVfmmk1R8DkvZPcSsPxy3jEKFO5ZXH5Mq7yAnjmAvTcHOV_F3owaYIxUqFN46lyg-zHqXuoseKVT8lKd-g/s3925/pngwing.com%20(1).png" >     
+           </a>
+       </div>
+       
+   </div>
+<h4 id="h43"> Tablets</h4>
+  <div id="tabletbrand">
+      <div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png">
+           </a>
+       </div>
+<div class="apple">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqiyYFW0kdFmdWU94Y15TPJ8NZ5WkxJiDY96vadXS7u5OuxxTFjJBPp3WcaxMcZFrDVyvvag00vGIoT0NAGlVvp8a9ZFX_TrLsUAqpwDJp24VpIJrccT4BwaJu_NyI-mKl1FKQWNvikFp9QQUCPCHTUuhbrhcUPATli1bgnaUSB2-4Ecxc2-LusAsMq3I/s560/pngwing.com%20(1).png">
+           </a>
+       </div>
+<div class="mi">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV9swkMHz32AV7xVqYOgWsGmjLtfzaY_ANwt7mVJZHnCJnfn3edqp7qU7GccQfee2tUWpwwW_OUECAdeg4QkrtE7gssaflTvwSykAkm1GvVbtp6V4BLbuf6hOyfhwlk5bUhz5EO59wRTo8f08OGKeu-vOwQpTSRddNNDA0azqoWWZ3RPzk-w9JE4Jonr4/s4096/pngwing.com.png">
+           </a>
+       </div>
+<div class="oneplus">
+           <a href="#">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZNyg3aW6rdiyVMN1JZQJZ8VMVUB8KWp-Fd4KsVC6mKNN0nGWp0hcP6yySzhPvhxCXTcT0JdteKuzzi63Ja0wfCR6u1vQLUmJj5__AeRVMregCFGV7XapfyqXd38CkNVyzRZsaaYw2g_9Ha5AR-Tx-xilAreIh2okmHyGFcWezYQOKiSI6yB530UCclA0/s3840/OnePlus-Logo.png"      > 
+           </a>
+       </div>
+<div class="lenovo">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixpyWtZBRpkqK8KB-4J-QFfkMsKlKRW0lop1C82WOkWT_7LzFdDu-6y1FpltEqpgyMY368V9v2Jd8578LPrONt0h7Wee0MQ12oQBLbdPl5q-9LYHYL95VRRScjo6WqT-c0Slgcqzueij23Z1oTOW2usphA_mt4fXIieFpT8S5mHTukdts3PuMTOXcVhFU/s2400/kisspng-laptop-lenovo-logo-computer-lenovo-logo-5ac00d722ae7c5.0182363415225357941758.png">
+           </a>
+       </div>
+  </div>
+<h4 id="h44"> Laptops</h4>
+<div id="laptopbrand">
+<div class="dell">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivbGgoSLIoMvyMlJT6J1uJ3Cu1WnzapLvt0PQPLsAwk-9i2HQv1sudBJMfeTf30z_QbBHbTd1sxJ5PCygdFFhMddEBw0FkLKeYFo9JKdf29heWzabBUf75b92_LRq3_b2V-NJa2gflnYjS7rQLOKDgIIDSEu7LMo1NmsUDL_l_iK4sJUKBJU_rP-TrGTU/s1600/pngwing.com%20(2).png">
+           </a>
+       </div>
+<div class="hp">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBUoHv7ABdQfA8VFuj2N7ekVInXzQhieq-TqpppnKvYq517krlJfqaS4c9Caya-Hy3Rhq7eej5gdBV1Qvw3L_Z3ofLaTNPxKqgg90bQSjutYCf0ECaOAHvK0hSwXIqrNrKD84czPMZ8B4nYTjHPKiXNoqdBqewWHHZyZWtV-ZAYsE51VsbGI5haU9Jay8/s1600/pngwing.com%20(3).png">
+           </a>
+       </div>
+<div class="lenovo">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixpyWtZBRpkqK8KB-4J-QFfkMsKlKRW0lop1C82WOkWT_7LzFdDu-6y1FpltEqpgyMY368V9v2Jd8578LPrONt0h7Wee0MQ12oQBLbdPl5q-9LYHYL95VRRScjo6WqT-c0Slgcqzueij23Z1oTOW2usphA_mt4fXIieFpT8S5mHTukdts3PuMTOXcVhFU/s2400/kisspng-laptop-lenovo-logo-computer-lenovo-logo-5ac00d722ae7c5.0182363415225357941758.png"     > 
+           </a>
+       </div>
+<div class="apple">
+           <a href="#">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqiyYFW0kdFmdWU94Y15TPJ8NZ5WkxJiDY96vadXS7u5OuxxTFjJBPp3WcaxMcZFrDVyvvag00vGIoT0NAGlVvp8a9ZFX_TrLsUAqpwDJp24VpIJrccT4BwaJu_NyI-mKl1FKQWNvikFp9QQUCPCHTUuhbrhcUPATli1bgnaUSB2-4Ecxc2-LusAsMq3I/s560/pngwing.com%20(1).png"     >
+           </a>
+       </div>
+<div class="acer">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjeKXPnuv24KpS_K6alC1m654HsmiaQCk5LXxEU_eu0j0vYjIZy0O0SgJ69ZCGwzzWkPN9LG_5FxgQ9plNujakr8-YupDjHNs5bFKZ8FsPdeBfQXZTK2Pm86GbHTYph5fQlUFcHrhHTCbSAEwR9-6Opc4e8XctPCAKyBTYb1_CoGt5pwDT597gbKgXD6E/s1024/pngwing.com%20(4).png">        
+           </a>
+       </div>
+</div>
+<h4 id="h45"> Camera </h4>
+<div id="camerabrand">
+<div class="sony">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr5p2SDuVw8uJlpUPyGDa3if1-m9jFyFHCt87fMAmNWYQmQmYSw0AzzCBe_8pW3SWVk7egaPgvGLv5iTKLAtiBNOwIutJovkcjzADrCZNm7nVfmmk1R8DkvZPcSsPxy3jEKFO5ZXH5Mq7yAnjmAvTcHOV_F3owaYIxUqFN46lyg-zHqXuoseKVT8lKd-g/s3925/pngwing.com%20(1).png">
+           </a>
+       </div>
+<div class="canon">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitIH9K0oQpwk4weilC3tN3gPREtN6i5AgBN91L43mh-43z8wxaP-3F5sZ9TyM0uPbiERqtKWuqgXCjeLrwEgbijxpvM9bivUv2IzFZ01HXt0r2v-OXcj7om0Uj7ZgZ4_z_PF4FiArEl_T3jP4n0QFyyhHqB3LE7uh3FN9GLxkMPFMI7hXKjGvM5Z7-_V4/s1500/pngwing.com%20(5).png">
+           </a>
+       </div>
+<div class="fujifilm">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcS7OjEluywwXnqlOCem-Duf1_3IaCbjSS-i33EU5mLvJda13U-IUwfAsvm9Uq7xGl_rOWjuM50ZJtNFxrW4OhLyzXiCR8EC46UqaeQgkspZs1uDIgNRLRmJGucguLlnuaYoI0X9O5L2Cq77HhApspIpoUTsrQUlEVAeu15VNn_renEiH-EteWZ4bB4Dk/s1280/pngwing.com%20(4).png"     > 
+           </a>
+       </div>
+<div class="nikon">
+           <a href="#">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGHGPFbvs03a2PeAja6bgVlmY7_FkcKhFC-HeVCkt7QfJZsSshkC0dRfVS52LREeR6aF2S2YMZ8xgXA24nAPJOJQLMKBLj19TOMQh3NBawMLHVXGNfuOgs6-j9XxDzknMEwVPavm3jKEN01Afzq84i4kmbgVhBT9T0G1atneisaVks3OkCobPkih3J8w0/s2400/pngwing.com%20(6).png"     >
+           </a>
+       </div>
+<div class="panasonic">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEQAGiT4C6G2yXI7VAPd8DHkiauhyNOR9RPOkYWK_DueW9W15ErX8sZeyccjRVbpMV_rbB7XZGx_fYofA6RJSoCesXI3KCAq_HdxtraGRSV2AiajLMFvQ-jkp0qb-xHJW270M4ArwK77zmymwfVlAMW3FIanQTYfLl3SoLjzl6wFqq29SHXKAQp9-RcZY/s2400/pngwing.com%20(7).png">        
+           </a>
+       </div>
+</div>
+<h4 id="h46"> Televisions</h4>
+<div id="televisionbrand">
+<div class="lg">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc_IfD2stGUPfy6knihdFmNLZz8K5LIPxtp5cE_MIkCuOn9yLZ4-mDkmA8lABnvZLxertCNx7WncuxHf5jgsBQqqqhkfxCpe7c89Z4_KBkwjnLye9fr2_cFF0LOQoI-Jt0Z24o-G0o_mT8Bn8OgzjE5dn6UJ6ree_xrGRmuJm22L-ae2BJ4T_70HnNkVE/s850/pngwing.com%20(8).png">
+           </a>
+       </div>
+<div class="panasonic">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEQAGiT4C6G2yXI7VAPd8DHkiauhyNOR9RPOkYWK_DueW9W15ErX8sZeyccjRVbpMV_rbB7XZGx_fYofA6RJSoCesXI3KCAq_HdxtraGRSV2AiajLMFvQ-jkp0qb-xHJW270M4ArwK77zmymwfVlAMW3FIanQTYfLl3SoLjzl6wFqq29SHXKAQp9-RcZY/s2400/pngwing.com%20(7).png">
+           </a>
+       </div>
+<div class="sony">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr5p2SDuVw8uJlpUPyGDa3if1-m9jFyFHCt87fMAmNWYQmQmYSw0AzzCBe_8pW3SWVk7egaPgvGLv5iTKLAtiBNOwIutJovkcjzADrCZNm7nVfmmk1R8DkvZPcSsPxy3jEKFO5ZXH5Mq7yAnjmAvTcHOV_F3owaYIxUqFN46lyg-zHqXuoseKVT8lKd-g/s3925/pngwing.com%20(1).png"     > 
+           </a>
+       </div>
+<div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png"     >
+           </a>
+       </div>
+<div class="tcl">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2FlEEFXJL1kIMk72ofqutFjNKRzPpGBktAkpkE3qqfUREJpGKhzn2RC5HQxWP8m2HxZ9zeV3eLPTDObYIoKl08MicjjGoBguiyqPLAEIDdodF84IvyW1hw3RDhtAK83nMQvuAwo5wd2BjOCSWIv8NKuTdmj0dDqdxAEytIdTC7jq0i6D25PYq9MVEGHA/s3000/pngwing.com%20(9).png">        
+           </a>
+       </div>
+</div>
+<h4 id="h47"> Washing Machines</h4>
+<div id="washbrand">
+<div class="whirlpool">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijhYM2sSpP1PIg8RK9BV7ZsdQuoIysCmJf2OLAlTa0yfatWRAmXXw4AD90ve1HbIEpf3rh-5buJ8XWOBfcG5T4_Ct1mfx_sjLq-dcOrQmNl5DhxPIHcVJdcX2qF5IaDuSuyheR5NIttJ2jQbb9I6pWFbnNeuEiWmWLzhkH7qs5ZfUpTxWdQSfWy_kFX1Q/s3459/pngwing.com%20(11).png">
+           </a>
+       </div>
+<div class="godrej">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxRkjEG7o_y-vK8Yj4wisRYHoK-_OFi5schyphenhyphenSlt40kNjH-zHyeMUiGZDPCXzhAn0Xt4LFzWBi8u45o0_EdiFsp-E8XGl14FOhXfdpHnfJ2yd1Gl9DtPKsY7oq-Cz6QhUDkKqnqR8RXkAa816dtgVsZDQttypeGLdlj5GnZns7qHC0acSQyPfCjNsgS3DI/s518/pngwing.com%20(10).png">
+           </a>
+       </div>
+<div class="haier">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIq-eOlBoGxRh7CLjvS8srXPTUKPfoq32ikzeBKBAdWQfoIjUyO9CsL5hHeQNm17oGB1ahTx47uT17XVzYhgYd9j6Tl8et68eAqIocz81BxX8u3vcqSiln9jFrNs3FUbVYQZ-k4lGfaScKPDGd6rGw8vEahZ115GyDsH9hH-CKcucgEWBTsOzcnpk7fXo/s3508/pngwing.com%20(12).png"     > 
+           </a>
+       </div>
+<div class="lg">
+           <a href="#">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc_IfD2stGUPfy6knihdFmNLZz8K5LIPxtp5cE_MIkCuOn9yLZ4-mDkmA8lABnvZLxertCNx7WncuxHf5jgsBQqqqhkfxCpe7c89Z4_KBkwjnLye9fr2_cFF0LOQoI-Jt0Z24o-G0o_mT8Bn8OgzjE5dn6UJ6ree_xrGRmuJm22L-ae2BJ4T_70HnNkVE/s850/pngwing.com%20(8).png"     >
+           </a>
+       </div>
+<div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png">        
+           </a>
+       </div>
+</div>
+<h4 id="h48">Refrigerators</h4>
+<div id="Refrigeratorbrand">
+<div class="godrej">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxRkjEG7o_y-vK8Yj4wisRYHoK-_OFi5schyphenhyphenSlt40kNjH-zHyeMUiGZDPCXzhAn0Xt4LFzWBi8u45o0_EdiFsp-E8XGl14FOhXfdpHnfJ2yd1Gl9DtPKsY7oq-Cz6QhUDkKqnqR8RXkAa816dtgVsZDQttypeGLdlj5GnZns7qHC0acSQyPfCjNsgS3DI/s518/pngwing.com%20(10).png">
+           </a>
+       </div>
+<div class="lg">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc_IfD2stGUPfy6knihdFmNLZz8K5LIPxtp5cE_MIkCuOn9yLZ4-mDkmA8lABnvZLxertCNx7WncuxHf5jgsBQqqqhkfxCpe7c89Z4_KBkwjnLye9fr2_cFF0LOQoI-Jt0Z24o-G0o_mT8Bn8OgzjE5dn6UJ6ree_xrGRmuJm22L-ae2BJ4T_70HnNkVE/s850/pngwing.com%20(8).png">
+           </a>
+       </div>
+<div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png"     > 
+           </a>
+       </div>
+<div class="haier">
+           <a href="#">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIq-eOlBoGxRh7CLjvS8srXPTUKPfoq32ikzeBKBAdWQfoIjUyO9CsL5hHeQNm17oGB1ahTx47uT17XVzYhgYd9j6Tl8et68eAqIocz81BxX8u3vcqSiln9jFrNs3FUbVYQZ-k4lGfaScKPDGd6rGw8vEahZ115GyDsH9hH-CKcucgEWBTsOzcnpk7fXo/s3508/pngwing.com%20(12).png"     >
+           </a>
+       </div>
+<div class="whirlpool">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijhYM2sSpP1PIg8RK9BV7ZsdQuoIysCmJf2OLAlTa0yfatWRAmXXw4AD90ve1HbIEpf3rh-5buJ8XWOBfcG5T4_Ct1mfx_sjLq-dcOrQmNl5DhxPIHcVJdcX2qF5IaDuSuyheR5NIttJ2jQbb9I6pWFbnNeuEiWmWLzhkH7qs5ZfUpTxWdQSfWy_kFX1Q/s3459/pngwing.com%20(11).png">        
+           </a>
+       </div>
+</div>
+<h4 id="h49">Microwaves</h4>
+<div id="microbrand">
+<div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png">
+           </a>
+       </div>
+<div class="lg">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc_IfD2stGUPfy6knihdFmNLZz8K5LIPxtp5cE_MIkCuOn9yLZ4-mDkmA8lABnvZLxertCNx7WncuxHf5jgsBQqqqhkfxCpe7c89Z4_KBkwjnLye9fr2_cFF0LOQoI-Jt0Z24o-G0o_mT8Bn8OgzjE5dn6UJ6ree_xrGRmuJm22L-ae2BJ4T_70HnNkVE/s850/pngwing.com%20(8).png">
+           </a>
+       </div>
+<div class="bajaj">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqNhWk78n03otcIyDJkg4Jm10Sr-XaA4pncwKmRqFaUajJXGfRm6D0MZy30DkkADxLdaPR9wNJGv5DcxGVyusm_DHPhFzYcDQGK_o60DoQX8z20i1GJUljnUVc6HwQPfreeBQ08iEstcN1mvicZnIh16nO7slQH0uHYxT-x8S3sqDgkL6ITVWtWBbDzLo/s513/pngwing.com%20(13).png"     > 
+           </a>
+       </div>
+<div class="whirlpool">
+           <a href="#">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijhYM2sSpP1PIg8RK9BV7ZsdQuoIysCmJf2OLAlTa0yfatWRAmXXw4AD90ve1HbIEpf3rh-5buJ8XWOBfcG5T4_Ct1mfx_sjLq-dcOrQmNl5DhxPIHcVJdcX2qF5IaDuSuyheR5NIttJ2jQbb9I6pWFbnNeuEiWmWLzhkH7qs5ZfUpTxWdQSfWy_kFX1Q/s3459/pngwing.com%20(11).png"     >
+           </a>
+       </div>
+<div class="panasonic">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEQAGiT4C6G2yXI7VAPd8DHkiauhyNOR9RPOkYWK_DueW9W15ErX8sZeyccjRVbpMV_rbB7XZGx_fYofA6RJSoCesXI3KCAq_HdxtraGRSV2AiajLMFvQ-jkp0qb-xHJW270M4ArwK77zmymwfVlAMW3FIanQTYfLl3SoLjzl6wFqq29SHXKAQp9-RcZY/s2400/pngwing.com%20(7).png">        
+           </a>
+       </div>
+</div>
+<h4 id="h410">Air Conditioners</h4>
+<div id="condibrand">
+<div class="haier">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIq-eOlBoGxRh7CLjvS8srXPTUKPfoq32ikzeBKBAdWQfoIjUyO9CsL5hHeQNm17oGB1ahTx47uT17XVzYhgYd9j6Tl8et68eAqIocz81BxX8u3vcqSiln9jFrNs3FUbVYQZ-k4lGfaScKPDGd6rGw8vEahZ115GyDsH9hH-CKcucgEWBTsOzcnpk7fXo/s3508/pngwing.com%20(12).png">
+           </a>
+       </div>
+<div class="bluestar">
+           <a href="#">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnsKmYDZ0CU54I3NLrDVPxwrIDplsh1LapTwNiaqu6ApaIFcwSthPGgfXD3_e_AlBC1EjsQzLV023SoeixCVjGmKKAA-jVFARhoQnuafZbOUFSvxs710NvLLQNTm12BaUe7xocE_RJhBnnyGizFaRtt4ygq5V32wNm08gq5RUnh0ep6sTSzlL6pmUAgI/s198/BSLLogo.png">
+           </a>
+       </div>
+<div class="godrej">
+           <a href="#">
+         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxRkjEG7o_y-vK8Yj4wisRYHoK-_OFi5schyphenhyphenSlt40kNjH-zHyeMUiGZDPCXzhAn0Xt4LFzWBi8u45o0_EdiFsp-E8XGl14FOhXfdpHnfJ2yd1Gl9DtPKsY7oq-Cz6QhUDkKqnqR8RXkAa816dtgVsZDQttypeGLdlj5GnZns7qHC0acSQyPfCjNsgS3DI/s518/pngwing.com%20(10).png"     > 
+           </a>
+       </div>
+<div class="samsung">
+           <a href="https://electronhubsamsung.netlify.app">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWkuCeBwuvRACkF67AvxogySHE5OOYFDpDN6CcXxCXC0V1Yc7fumyga_k5H1jc-JKjA052EsyvTldb_nSglJuVmMpO346xC9JxelbmeP9iq1u6wWaNNdB1Le7K42mDMaaj9SDefKONlrig-vLJJOWjndZ8fTbDFbZ_o33-RJ8O57oQYZ1pywMbv0iavWw/s1200/5a355b5ad2c9a3.2366288215134462348634.png"     >
+           </a>
+       </div>
+<div class="lg">
+           <a href="#">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc_IfD2stGUPfy6knihdFmNLZz8K5LIPxtp5cE_MIkCuOn9yLZ4-mDkmA8lABnvZLxertCNx7WncuxHf5jgsBQqqqhkfxCpe7c89Z4_KBkwjnLye9fr2_cFF0LOQoI-Jt0Z24o-G0o_mT8Bn8OgzjE5dn6UJ6ree_xrGRmuJm22L-ae2BJ4T_70HnNkVE/s850/pngwing.com%20(8).png">        
+           </a>
+       </div>
+</div>
+<div class="foot">
+Copyright © 2024 Electron Hub. All rights reserved. 
+
+
+
+</div>
+</body>
+</html>
