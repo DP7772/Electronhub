@@ -1,0 +1,1255 @@
+*{
+            margin:0px;
+            padding:0px;
+            
+        }
+        
+        .bar{
+            width:100%;
+            height:90px;
+            box-sizing:border-box;
+            background-color:yellow;
+            position:fixed;
+            top:1px;
+            margin:0px 2px 0px 1px;
+        }
+        
+        a{
+            text-decoration:none;
+           color:black;
+               }
+     
+
+        
+        .home{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left;
+        }
+        
+        .home:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+
+        
+       .product{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left; 
+           position:relative;
+        }
+        
+        .product:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+            
+        }
+        
+        .product:hover .drop{
+            display:block;
+            font-size:20px;
+        }
+        
+        .support{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+          
+           float:left; 
+        }
+        
+        .support:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        .about{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+         
+           float:left; 
+        }
+        
+        .about:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        
+        .contact{
+            width:20%;
+            height:90px;
+            box-sizing:border-box;
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            padding-top:25px;
+         
+           float:left;
+        }
+        
+        .contact:hover{
+            background-color:red;
+            color:white;
+            font-size:25px;
+            padding-top:20px;
+            transition:0.5s;
+            border-radius:20px;
+        }
+        
+        .drop{
+           width:150%;
+           height:150px;
+           box-sizing:border-box;
+      background-color:#ffb355;
+           border-radius:1px 30px 30px 30px;
+            position:absolute;
+            top:92px;
+            left:65px;
+            text-align:justify;
+            display:none;
+            overflow:scroll;
+        }
+        
+        .drop div{
+            width:100%;
+            height:60px;
+        box-sizing:border-box;
+
+      
+         padding:13px 0px 0px 30px ;
+        }
+        
+        
+        .drop div:hover{
+            background-color:red;
+            color:white;
+            transition:0.5s;
+            border-radius:36px;
+        }
+        
+        .name{
+            width:100%;
+            height:300px;
+           margin-top:92px;
+          background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgL18i5yGhACTQ-4sn5NlYYAWxVwWx_D216EZTQpnDIog48dHZzoTFNusexpwPU5ZFFV0lBNOzacNRXTjRlnSIqtMccdJQUGn8ZOPtTDE-uB0RNTwqff_0zRzZNhRzka-uzSmEHN7ofJHk_Fe35ykBCiBnM7yJZeSmazTBYapLC0b5LvwU2G-UHpy_5Arc/s320/ecommerce-online-shopping-marketing-concept-vector-stock-illustration_618588-583.jpg);
+          background-size:100% 300px;
+       
+         
+        }
+        
+        .name h1{
+            color:white;
+            font-size:8vw;
+            font-weight:bold;
+            padding:50px 0px 0px 200px;
+        }
+        
+        .name h3{
+            color:white;
+            font-size:3.5vw;
+            font-weight:bold;
+            padding:15px 0px 0px 123px;
+        }
+        
+        .animation{
+            width:100%;
+            height:550px;
+      box-sizing:border-box;
+            float:left;
+            margin-top:1px;
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+     
+     background-size:100% 550px;
+     -webkit-animation:image 8s linear infinite;
+     -o-animation:image 8s linear infinite;
+    -moz-animation:image 8s linear infinite;
+     animation:image 8s linear infinite;
+        }
+        
+        @-webkit-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @-o-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @-moz-keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+        @keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitxhNdtSWHmyK5x40fLHC8L4SCWSxbAyrJrABkNBoefpPNOzsh1F-dM-35tjFzLp_cuCvGVRyuzjZ3bJPPy3r5sNlB2dSZu3taXeDQ_nAO6UcHSpvqM_knIvc92-gFb5DLKB8Hub-FSTW23ppDNAaCFuldvkxuI2fZIagdiclBsEhwHAdNoob1FkvLqOw/s320/IMG-20240414-WA0008.jpg);
+                background-size:100% 550px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNOO2wiZymvtBRc81WrTz2qN9xj6j7mBFoGcW3cBOlemMdRJxyqBiO4Ntk4Kj4bMUcUrE-O2Qe1wyiNmxkdkxyGz14fc6e6DN7KrnDOGrGLtnMAexv2QiINdvUNrT1vAuFEHnQo3r0oDLeHyg4G-JpTAikJXwFvN7VIX0UXTtyS7ZsaYJ77rSaQY1W_5k/s320/IMG-20240414-WA0011.jpg);
+                background-size:100% 550px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4cfDrN2HoYlTC9UZrx3UcNhT-aj4fu4PZvChCQskjRYrf_cImmQMy16uZ2MvCXNBKHShHb1vy6ZxGQhvPZRGKkAvBIzqw7pcQx2ju0sun_G24biZ_7VZrUXUILnLRbuLNgTdXfcH_R2iqbu9GEVufotacUc8pi9xSDUtJWaq30isXy3UaZB1e6AvHFB0/s320/IMG-20240414-WA0012.jpg); background-size:100% 550px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUH9H1KrqndmgivDHHjJ-IGu1Z132y-HQLMUBPY64te_-jU9dAN40zyN73L9A8IcjuGr44plGxFZq0p8FGfJa0t5qcfbMWY2UTD0WwyLicmz6a4GSBUCFEjlhFcNopKdeR87NjtkCADRPHJXSs1GqFsJT_safPh_GUzgUVIItA-rAoj116doYnmngr-HE/s320/IMG-20240414-WA0014.jpg);
+                background-size:100% 550px;
+            }
+            
+        }
+        
+    .choose{
+        width:100%;
+        height:80px;
+        box-sizing:border-box;
+        float:left;
+        padding:20px 0px 0px 308px;
+        font-size:3.5vw;
+        font-weight:bold;
+        margin-bottom:20px;
+    }   
+        
+        h2{
+            text-align:center;
+       
+       
+              }
+        
+        @keyframes h2 {
+     
+        }
+        
+        #phonebrand{
+           width:100%;
+           height:100px; 
+     box-sizing:border-box;
+         float:left;
+         margin-top:20px;
+       
+         
+        display:flex;
+  
+              }
+        
+        img{
+            width:100%;
+            height:100%;
+        }
+        
+        .samsung{
+            width:20%;
+            height:100px;
+     box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;         border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .apple{
+            width:18%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border: 3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .mi{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .oneplus{
+            WIDTH:20%;
+            HEIGHT:100PX;
+           box-sizing:border-box;
+          padding:0px;
+          padding-left:5px;
+          padding-right:5px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .vivo{
+            width:20%;
+            height:100px;
+        box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+          padding:5px 0px 5px 5px;
+        }
+      
+    .vivo img{
+          width:95%;
+          height:98%;
+          
+      }
+      
+      
+      h4{
+          text-align:center;
+          line-height:60px;
+          font-size:2.3vw;
+          
+      }
+      
+      #watchbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+ 
+      .boat{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:5px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+      
+      
+        .noise{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        #headbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+        
+        .jbl{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .sony{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        #tabletbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.lenovo{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+ #laptopbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.dell{ 
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.hp{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.acer{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+
+#camerabrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.canon{
+            width:20%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+
+.panasonic{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+.fujifilm{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        
+        .nikon{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+#televisionbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+ 
+        .lg{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+
+ 
+        .tcl{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+
+#washbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.whirlpool{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.godrej{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.haier{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+#Refrigeratorbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+#microbrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.bajaj{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+
+#condibrand{
+          width:100%;
+          height:100px;
+          float:left;
+          display:flex;
+      }
+
+.bluestar{
+            width:19%;
+            height:100px;
+          box-sizing:border-box;
+          padding:0px;
+          border:3px groove grey;
+          border-radius:5px;
+          margin-left:5px;
+          margin-right:5px;
+       }
+
+.foot{
+width:100%;
+height:50px;
+color:white;
+box-sizing:border-box;
+background-color:black;
+float:left;
+margin-top:15px;
+font-weight:bold;
+padding-top:10px;
+padding-left:255px;
+}
+
+
+
+
+
+        
+        
+      @media only screen and (max-width:600px) 
+      {
+          .bar{
+        background-color:#ffb380;
+        margin:0px;
+        height:350px;
+               
+          }
+          
+          .home{
+              width:100%;
+              padding:0 auto;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .home:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .product{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .product:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .support{
+              width:100%;
+              padding-left:10px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .support:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .about{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .about:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .contact{
+              width:100%;
+              padding-left:18px;
+              height:70px;
+              padding-top:10px;
+          }
+          
+          .contact:hover{
+              padding-top:10px;
+              background-color:green;
+          }
+          
+          .drop{
+          width:70%;
+          height:60px;
+            overflow:scroll;
+            top:72px;
+            left:125px;
+       background-color:white;
+            border-radius:5px;
+          }
+         
+          .drop div:hover{
+              border-radius:5px;
+          }
+          
+          .name{
+             margin-top:351.7px;
+            height:150px; background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAA0lx7ifVnKx6lEw8S651GXq6GXM5EI8Bj1nLzrhV41_qYGsJOLxjVR2dGFJHIglFTAtM5gNdFAIWPpBvECMj1-FzbH8xxIljUhYAvUiOZ0AV1IVkLPziP5uLtzO02zfkKxTavx2sVfT2EG84FOVuU2ACm-kwNGovYYLlok_AR2J2jwPUce-5XZYSOuQ/s320/IMG-20240414-WA0003.jpg);
+             background-size:100%
+ 100%;
+                   }
+          
+          .name h1{
+             
+              font-size:7vw;
+              padding:70px 0px 0px 98px;
+          }
+          
+          .name h3{
+           
+              font-size:3.5vw;
+              padding:5px 0px 0px 50px;
+                     }
+          
+          .animation{
+              height:250px;
+                           background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqrCbuUDGJw3d0TDd9xiB-8BljUWnGRV37cSIPZxjr2ER5TfPejNiLG7bXhU-y3tfROUGQp9-70MT9wCG7KGBV8NYzgJygbeqIYiyHQd0WrTM6PsLh7zfw8VM9Rpdf5u5bE8LG8e9WUk0xrdXsYaOaAtLq-RidiCOWYFj7Y8-IMSv_DEd9n8Dqc-eI5-E/s320/IMG-20240414-WA0010.jpg);
+   background-size:100% 250px;
+          }
+          
+          @keyframes image{
+            0%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqrCbuUDGJw3d0TDd9xiB-8BljUWnGRV37cSIPZxjr2ER5TfPejNiLG7bXhU-y3tfROUGQp9-70MT9wCG7KGBV8NYzgJygbeqIYiyHQd0WrTM6PsLh7zfw8VM9Rpdf5u5bE8LG8e9WUk0xrdXsYaOaAtLq-RidiCOWYFj7Y8-IMSv_DEd9n8Dqc-eI5-E/s320/IMG-20240414-WA0010.jpg);
+                background-size:100% 250px;
+            }
+            
+            30%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJE3mtjFxCikHmTbu5Q0GIUrRASvcCZ7tg_wZM9qO8i95_DwWR1TnWj9g-qPfJhQm9n03EPYOlQwHqKW4Go1Hi_htwX0ehLF98Rp7D2VaSUDx9GOtsPFIAGram-bGbh8IPVE-NwXASovXOfgylAZt1nhMWY987SKLcxvZSSaiGHstmnWaWAOnVCQuaeKQ/s320/IMG-20240414-WA0009.jpg);
+                background-size:100% 250px;
+            }
+            
+            60%{
+                
+     background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS6dM4snYvORhlHx8CkUXyl8t2tUFwUH7FiN5tdUeX3axCTpxMDDBXpUMya-eiDQPnEVk5uwHug8Iave3gYfhZFiabBGQB829d-PNSs0I3AOuAhChZFojTI3rRROlCHIZKVsNQttRghRWlwntujb-e0oHTKkqSsVUW6iK3uOzpfWE8c81x9ST-Evxu8bs/s320/IMG-20240414-WA0007.jpg); background-size:100% 250px;
+            }
+            
+            90%{
+                background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjg9Mk9VhMT4kmAh5kak0N0pVontLUaWb5JkAsEYW7ThDyK99AYgI0JxuIFpmzunj7pOuGTphgg7uilDnXJnFZ6w2G4WvIIwMZj4ZiKFkvqKq9kS9DQlMqAPuZBKRlohcP0zL4tfvR9jsfo91-87iATbHCUDnjhTfv7GDZrwQAtefWILLMywqIIZ0LjUDo/s320/IMG-20240414-WA0004.jpg);
+                background-size:100% 250px;
+            }
+            
+        }
+        
+       .choose{
+       height:60px;
+           font-size:4vw;
+           padding:15px 0px 0px 113px;
+         margin-bottom:1px;
+       }  
+          
+          h2{
+              font-size:4vw;
+              margin:0px;
+              padding:0px;
+          }
+          
+
+          
+      #phonebrand{
+      width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:140px;
+          border:3px groove black;
+border-radius:10px;
+      }   
+        
+      .samsung{
+          width:98%;
+          height:110px;
+          margin:0px;
+          margin-top:15px;
+              margin-left:2px;
+
+      } 
+          .apple{
+              width:98%;
+              height:150px;
+              margin-top:15px;
+              margin-left:2px;
+          }
+          
+          .mi{
+              width:98%;
+              margin-top:15px;
+              margin-left:2px;
+              margin-bottom:15px;
+          }
+          
+          .oneplus{
+              width:98%;
+              margin-top:0px;
+              margin-left:2px;
+              padding-left:5px;
+              padding-right:5px;
+          }
+          
+          .vivo{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+          h4{
+              font-size:4vw;
+              line-height:50px;
+          }
+          
+           #watchbrand{
+           width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:175px;
+          border:3px solid black;
+border-radius:10px;
+      }   
+          
+          .noise{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+         
+          .boat{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+         
+          #headbrand{
+           width:99%;
+          flex-direction:column;
+          overflow-x:hidden;
+          height:130px;
+          border:3px solid black;
+border-radius:10px;
+      }   
+          
+          .jbl{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+          .sony{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+          }
+          
+#tabletbrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+      }
+
+.lenovo{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#laptopbrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+      }
+
+.dell{
+              width:98%;
+              margin:0px;
+height:110px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.hp{
+              width:98%;
+              margin:0px;
+height:110px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.acer{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+
+#camerabrand{
+          width:99%;
+          height:140px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.nikon{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.panasonic{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.fujifilm{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.canon{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+
+#televisionbrand{
+          width:99%;
+          height:165px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.lg{
+              width:98%;
+              margin:0px;
+height:135px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.tcl{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#washbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.whirlpool{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.godrej{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.haier{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#Refrigeratorbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+#microbrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.bajaj{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+#condibrand{
+          width:99%;
+          height:135px;
+          flex-direction:column;
+          display:flex;
+overflow-x:hidden;
+border:3px solid black;
+border-radius:10px;
+}
+
+.bluestar{
+              width:98%;
+              margin:0px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:2px;
+              padding-left:15px;
+}
+
+.foot{
+height:60px;
+padding-left:40px;
+font-size:2.5vw;
+padding-top:20px;}
+
+      }
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+      
+      
+      @media only screen and (max-width:900px) and (min-width:768px)
+      {
+          .drop{
+              width:190%;
+          }
+          
+          .name{
+              height:220px;
+          }
+          
+          
+          .name h1{
+            
+              padding-left:157px;
+          }
+          
+          .name h3{
+             padding-left:100px;
+          }
+          
+          .animation{
+              height:500px;
+          }
+          
+          .choose{
+              padding:20px 0px 0px 218px;
+              margin-bottom:5px;
+          }
+          
+          h2{
+              margin:0px;
+              padding:0px;
+              
+          }
+          
+          #phonebrand{
+              margin-top:20px;
+          }
+          
+          h4{
+              font-size:3vw;
+          }
+          
+.foot{
+padding-left:137px;}
+          
+      }
